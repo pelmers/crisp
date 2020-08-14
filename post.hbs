@@ -3,8 +3,19 @@
 <article id="{{id}}" class="{{post_class}}">
 	<div class="post-stamp">{{date published_at format='MMMM D, YYYY'}}<span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span>{{#if featured}}<span class="separator"> &middot; </span><i class="fa fa-star-o feature-star"></i>{{/if}}</div>
 	<h1 class="post-title">{{title}}</h1>
+        <div style="margin-top:-0.8em; font-style: italic;" class="reading-eta"><b>5 min read</b></div>
 	{{content}}
-	{{> share}} 
   {{> comments}}
 </article>  
+
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+	var doc = document.querySelector('article').innerText;
+	var words = doc.split(' ');
+	var time = Math.round(words.length / 180);
+	document.querySelector('.reading-eta').innerText = time + ' min read';
+});
+</script>
+
 {{/post}}
+

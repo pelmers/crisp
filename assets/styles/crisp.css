@@ -87,7 +87,7 @@ img, iframe {
 a {
 	font-weight:700;
 	text-decoration:none;
-	color: #5cc265; /* Change Link Color */
+	color: #0085b9; /* Change Link Color */
 }
 a:hover {
 	text-decoration:underline;
@@ -250,6 +250,21 @@ footer a:hover {
 		width:auto;
 		text-align:center;
 		padding-bottom:1em;
+	}
+	header h1 {
+		text-align: left;
+	}
+	header h6 {
+		display: none;
+	}
+	header #logo {
+		display: none;
+	}
+	header #follow-icons {
+		display: none;
+	}
+	header > p {
+		display: none;
 	}
 	#content {
 		margin-left: 0;
