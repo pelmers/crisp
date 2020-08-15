@@ -8,14 +8,14 @@
   {{> comments}}
 </article>  
 
+{{/post}}
+
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-	var doc = document.querySelector('article').innerText;
+	var doc = document.querySelector('#{{id}}').innerText;
 	var words = doc.split(' ');
 	var time = Math.round(words.length / 180);
 	document.querySelector('.reading-eta').innerText = time + ' min read';
 });
 </script>
-
-{{/post}}
 

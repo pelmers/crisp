@@ -18,7 +18,7 @@ body {
 	padding: 2em 2.5em 1em 20em;
 }                  
 /* Blocks */
-header {
+#header {
 	border-right: 1px #eee solid;
 	padding: 2em;
 	position:fixed;
@@ -33,7 +33,7 @@ header {
 	display: block;
 	width: 100%;
 }
-footer {
+#footer {
 	padding: 1em 0em 2.5em 0em;
 	font-size:0.8em;
 	line-height: 1.5em;
@@ -132,23 +132,23 @@ input {
 	padding: 0.3em;
 }
 /* Sidebar */
-header h1 {
+#header h1 {
 	font-size:1.9em;
 	margin-top:0.8em;
 	margin-bottom:0.6em;
 }
-header h1 a {
+#header h1 a {
 	color:#444;
 }  
-header h1 a:hover {
+#header h1 a:hover {
 	text-decoration:none;
 }
-header #logo img {
-	width:9em;
-	height:9em;
-	border-radius:4.5em;
-	-moz-border-radius: 4.5em;
-	-webkit-border-radius: 4.5em;
+#header #logo img {
+	width:12em;
+	height:12em;
+	border-radius:6em;
+	-moz-border-radius: 6em;
+	-webkit-border-radius: 6em;
 	border: none;
 }
 #follow-icons {
@@ -168,7 +168,7 @@ header #logo img {
 	font-size:1.05em;
 	line-height:1.9em;
 }
-header h6 {
+#header h6 {
 	margin-top:0.5em;
 }
 /* Posts */
@@ -242,7 +242,7 @@ footer a:hover {
 	body {
 		padding:0;
 	}
-	header {
+	#header {
 		border-right: none;
 		border-bottom: 1px #eee solid;
 		position:relative;
@@ -251,19 +251,19 @@ footer a:hover {
 		text-align:center;
 		padding-bottom:1em;
 	}
-	header h1 {
+	#header h1 {
 		text-align: left;
 	}
-	header h6 {
+	#header h6 {
 		display: none;
 	}
-	header #logo {
+	#header #logo {
 		display: none;
 	}
-	header #follow-icons {
+	#header #follow-icons {
 		display: none;
 	}
-	header > p {
+	#header > p {
 		display: none;
 	}
 	#content {
@@ -277,8 +277,23 @@ footer a:hover {
 }
 /* Tiny Screens */
 @media only screen and (max-width: 320px) { 
-	header {
+	#header {
 		padding: 1.2em 1.2em 0.6em 1.2em;
+	}
+	#header h1 {
+		text-align: left;
+	}
+	#header h6 {
+		display: none;
+	}
+	#header #logo {
+		display: none;
+	}
+	#header #follow-icons {
+		display: none;
+	}
+	#header > p {
+		display: none;
 	}
 	#content {
 		padding: 1.2em 1.2em 0.6em 1.2em;
@@ -290,3 +305,79 @@ footer a:hover {
 		margin-left: 2em; 
 	}
 }
+
+/* Copied from mnml */
+.post-index {
+  position: relative;
+  max-width: 850px;
+  margin: 2.457rem 0px;
+  padding-bottom: 2.457rem;
+  border-bottom: #EBF2F6 1px solid;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Add a little circle in the middle of the border-bottom on our .post
+   just for the lolz and stylepoints. */
+.post-index:after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #fdfdfd;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: #fdfdfd 0 0 0 5px;
+}
+
+.post-index .post-title a {
+  text-decoration: none;
+}
+
+.post-index .post-excerpt p {
+  margin: 1.1rem 0 0 0;
+}
+
+.post-index .post-thumbnail{
+  display: inline-block;
+  float:left;
+  max-width:250px;
+  margin-right: 1.65rem;
+  margin-bottom: 1.65rem;
+}
+
+.post-index .post-thumbnail img{
+  max-width:250px;
+}
+
+.post-index .read-more {
+    text-decoration: none;
+}
+
+.post-index .read-more span:before{
+  content: "read more ";
+}
+
+.post-index .post-date {
+  display: inline-block;
+}
+
+.post-index .post-tags:before {
+  content: " • ";
+}
+
+.post-index .post-date:before{
+  content: "";
+}
+
+.post-index footer {
+	font-size: 0.8em;
+	padding-top: 0.2em;
+}
+
