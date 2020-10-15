@@ -6,7 +6,7 @@
 html, body {
 	font-size: 1em;
 	line-height: 1.65em;
-	font-family: "Open Sans", sans-serif;
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
 	font-weight: 300;
     background: #fff;
 	color: #444;
@@ -32,6 +32,7 @@ body {
 #content {
 	display: block;
 	width: 100%;
+	max-width: 800px;
 }
 #footer {
 	padding: 1em 0em 2.5em 0em;
@@ -236,34 +237,57 @@ footer a:hover {
 	html, body {
 		font-size: 1.1em;
 	} 
+	#content {
+		margin: auto;
+	}
 }
 /* Small Screens */
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 1280px) { 
 	body {
+		font-size: 18px;
+		line-height: 27px;
 		padding:0;
+	}
+	#content {
+		margin: auto;
+		max-width: 650px;
 	}
 	#header {
 		border-right: none;
-		border-bottom: 1px #eee solid;
 		position:relative;
 		height:auto;
 		width:auto;
-		text-align:center;
 		padding-bottom:1em;
+		background-color: #EEE;
 	}
 	#header h1 {
 		text-align: left;
+		line-height: 1em;
+		margin-top: 0em;
+		margin-bottom: 0em;
 	}
 	#header h6 {
-		display: none;
+		display: inline;
+	}
+	#header h6:after {
+		content: " • ";
+	}
+	#header h6:last-child:after {
+		content: "";
 	}
 	#header #logo {
-		display: none;
+		display: inline;
+	}
+	#header #logo img {
+		width:7em;
+		height:7em;
+		border-radius:3.5em;
+		-moz-border-radius: 3.5em;
+		-webkit-border-radius: 3.5em;
+		float: left;
+		margin-right: 2em;
 	}
 	#header #follow-icons {
-		display: none;
-	}
-	#header > p {
 		display: none;
 	}
 	#content {
@@ -346,7 +370,7 @@ footer a:hover {
 
 .post-index .post-thumbnail{
   display: inline-block;
-  float:left;
+  float: left;
   max-width:250px;
   margin-right: 1.65rem;
   margin-bottom: 1.65rem;
@@ -381,3 +405,10 @@ footer a:hover {
 	padding-top: 0.2em;
 }
 
+.post-card {
+	font-weight: bold;
+}
+
+.post-card > a {
+	font-style: italic;
+}
