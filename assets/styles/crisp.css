@@ -171,8 +171,11 @@ ul, ol {
 	margin-left: 3em; 
 }
 code {
-	font-size:1.4em;
+	font-size:1em;
+	padding: 0.2em 0.3em;
 	background: #eee;
+	color: #bf616a;
+	border-radius: 3px;
 }
 pre {
 	font-size: 0.8em;
