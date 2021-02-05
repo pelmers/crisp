@@ -14,9 +14,17 @@ html, body {
 html {
 	height: 100%;
 }
-body {
+#body {
 	padding: 2em 2.5em 1em 20em;
 }                  
+#header-content {
+	width: 100%;
+	max-width: 800px;
+	margin: auto;
+}
+#header-nav {
+	padding-top: 1em;
+}
 /* Blocks */
 #header {
 	border-right: 1px #eee solid;
@@ -29,16 +37,69 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+#page-header {
+	border-right: none;
+	position:relative;
+	height:auto;
+	width:100%;
+	padding-bottom:0.5em;
+	background-color: #EEE;
+}
+#page-header h6 {
+	display: inline;
+}
+#page-header h6:after {
+	content: " • ";
+}
+#page-header h6:last-child:after {
+	content: "";
+}
+#page-header #logo {
+	display: inline;
+}
+#page-header #logo img {
+	width:4em;
+	height:4em;
+	border-radius:4em;
+	-moz-border-radius: 4em;
+	-webkit-border-radius: 4em;
+	float: left;
+	margin-right: 2em;
+}
+#page-header #follow-icons {
+	display: none;
+}
+
+#page-body #content {
+	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	font-weight: normal;
+	font-size: 1.1rem;
+	line-height: 1.8;
+}
+
+#page-body #content h3 {
+	font-weight: bold;
+}
+
 #content {
 	display: block;
 	width: 100%;
-	max-width: 800px;
+	max-width: 700px;
+}
+.reading-eta {
+	border: 0 solid #e5e7eb;
+	border-color: rgb(243,244,246);
+	border-top-width: 1.5px;
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
 }
 #footer {
 	padding: 1em 0em 2.5em 0em;
 	font-size:0.8em;
 	line-height: 1.5em;
 	color: #888;
+	width: 100%;
+	max-width: 700px;
 }
 article {
 	border-bottom: 0.1em #eee solid;
@@ -51,11 +112,11 @@ p, hr, h4, h5, h6 {
 }
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Bree Serif", serif;
-	font-weight: 400 !important;
+	font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+	font-weight: 500;
 }
 h1 {
-	font-size: 2.5em;
+	font-size: 2.3em;
 	line-height: 1.1em;
 	margin-top: 0.6em;
 	margin-bottom: 0.6em;
@@ -92,9 +153,6 @@ a {
 }
 a:hover {
 	text-decoration:underline;
-}
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-	font-weight:400 !important;
 }
 strong {
 	font-weight: 700;
@@ -173,12 +231,20 @@ input {
 	margin-top:0.5em;
 }
 /* Posts */
-article span.post-stamp {
-	color:#888;     
+article .post-stamp {
+	color: rgb(107,114,128);
+	font-weight: 500;
+	text-align: center;
+	font-size: 16px;
 }
 h1.post-title {
-	margin-top:0.35em;
-	margin-bottom: 0.6em;
+	margin-top:0.5em;
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 48px;
+	letter-spacing: -.05em;
+	color: black;
+	text-align: center;
 }
 h3.post-title {
 	margin-top:0.4em;
@@ -219,6 +285,110 @@ h3.post-title {
 	padding-bottom: 0.2em;
 	border-bottom: 1px solid #eee;
 }
+.kg-bookmark-card {
+ width:100%;
+ box-sizing:border-box;
+ border:1px solid #e5eff5;
+ background:#fff;
+ border-radius:5px
+}
+.kg-bookmark-container:hover {
+    text-decoration: none;
+}
+.kg-bookmark-container {
+ display:flex;
+ color:#343f44;
+ text-decoration:none;
+ box-shadow:none;
+ min-height:120px
+}
+.kg-bookmark-content {
+ display:flex;
+ flex-direction:column;
+ flex-grow:1;
+ flex-basis:100%;
+ align-items:flex-start;
+ justify-content:flex-start;
+ padding:20px;
+}
+.kg-bookmark-title {
+ font-size:1.2em;
+ line-height:1.5em;
+ font-weight:500
+}
+.kg-bookmark-container:hover .kg-bookmark-title {
+ color:#3eb0ef
+}
+.kg-bookmark-description {
+ display:-webkit-box;
+ font-size:0.8em;
+ line-height:1.5em;
+ margin-top:3px;
+ color:#54666d;
+ font-weight:400;
+ max-height:44px;
+ overflow-y:hidden;
+ -webkit-line-clamp:2;
+ -webkit-box-orient:vertical
+}
+.kg-bookmark-thumbnail {
+ position:relative;
+ flex-grow:1;
+ min-width:33%
+}
+.kg-bookmark-thumbnail img {
+ width:100%;
+ height:100%;
+ -o-object-fit:cover;
+ object-fit:cover;
+ position:absolute;
+ top:0;
+ left:0;
+ border-top-right-radius:4px;
+ border-bottom-right-radius:4px
+}
+.kg-bookmark-metadata {
+ color:#343f44;
+ font-size:0.75em;
+ font-weight:500;
+ display:flex;
+ align-items:center;
+ margin-top:22px
+}
+.kg-bookmark-icon {
+ width:20px;
+ height:20px;
+ margin-right:6px
+}
+.kg-bookmark-author:after {
+ content:"•";
+ margin:0 6px
+}
+.kg-bookmark-publisher {
+ color:#3eb0ef;
+ text-overflow:ellipsis;
+ overflow:hidden;
+ max-width:240px;
+ white-space:nowrap;
+ display:block;
+ line-height:1.65em
+}
+
+.fluid-width-video-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.fluid-width-video-wrapper iframe,
+.fluid-width-video-wrapper object,
+.fluid-width-video-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /* Footer */
 .pagination {
 	margin-bottom:1em;
@@ -233,21 +403,27 @@ footer a:hover {
 	text-decoration: none;
 }
 /* Large Screens */
-@media only screen and (min-width: 1281px) {
+@media only screen and (min-width: 1001px) {
 	html, body {
 		font-size: 1.1em;
 	} 
 	#content {
 		margin: auto;
 	}
+	#footer {
+		margin: auto;
+	}
 }
 /* Small Screens */
-@media only screen and (max-width: 1280px) { 
+@media only screen and (max-width: 1000px) { 
 	body {
 		font-size: 18px;
 		line-height: 27px;
 		padding:0;
 	}
+	#body {
+		padding: 0em;
+	}                  
 	#content {
 		margin: auto;
 		max-width: 650px;
@@ -295,10 +471,18 @@ footer a:hover {
 		padding: 2em 2em 1em 2em;
 		width: auto;
 	}
-	footer {
-		padding: 0 2.5em 2em 2.5em;
+}
+
+@media only screen and (max-width: 600px) { 
+	.post-thumbnail {
+		flex-basis: 100%;
+	}
+	.post-excerpt {
+		max-width: 100% !important;
+		min-width: 0% !important;
 	}
 }
+
 /* Tiny Screens */
 @media only screen and (max-width: 320px) { 
 	#header {
@@ -364,16 +548,28 @@ footer a:hover {
   text-decoration: none;
 }
 
+.post-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.post-excerpt {
+	max-width: calc(100% - 300px);
+	min-width: 40%;
+	margin-bottom: 1.65rem;
+}
+
 .post-index .post-excerpt p {
-  margin: 1.1rem 0 0 0;
+  margin: 0 0 0 0;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .post-index .post-thumbnail{
   display: inline-block;
-  float: left;
   max-width:250px;
   margin-right: 1.65rem;
-  margin-bottom: 1.65rem;
 }
 
 .post-index .post-thumbnail img{
@@ -385,7 +581,7 @@ footer a:hover {
 }
 
 .post-index .read-more span:before{
-  content: "read more ";
+  content: "Read more ";
 }
 
 .post-index .post-date {

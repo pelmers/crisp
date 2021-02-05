@@ -13,10 +13,11 @@
 
 			<link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 			<noscript><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"></noscript>
+	
 			{{! Responsive Meta Tags }}
 	    <meta name="HandheldFriendly" content="True" />
-		<meta name="description" content="Blog of Peter Elmers, focused on sharing lessons learned from experiences and solving problems in daily life" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta name="description" content="{{meta_description}}" />
 			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!--[if lt IE 9]>
 				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -25,12 +26,14 @@
 			{{{block "head"}}}
 	    {{ghost_head}}
 	</head>
-	<body id="body" class="{{body_class}}">
-		<header id="header" {{#if @blog.cover_image}}style="background-image: url('{{@blog.cover_image}}')"{{/if}}>
+	<body id="page-body" class="{{body_class}}">
+		<header id="page-header" {{#if @blog.cover_image}}style="background-image: url('{{@blog.cover_image}}')"{{/if}}>
+			<div id="header-content">
 			{{#if @blog.logo}}<a id="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-			<h1><a href="{{@blog.url}}">{{@blog.description}}</a></h1>
-			<p>{{@blog.title}}</p>
-			{{navigation}}
+			<div id="header-nav">
+				{{navigation}}
+			</div>
+			</div>
 		</header>
 		<main id="content">
 			{{{body}}}
