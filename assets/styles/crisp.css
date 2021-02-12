@@ -611,3 +611,11 @@ footer a:hover {
 .post-card > a {
 	font-style: italic;
 }
+
+#disqus-btn > span {
+	color: #0085b9;
+	font-weight: 700;
+	text-decoration: underline;
+	cursor: pointer;
+	padding: 0.3em;
+}
