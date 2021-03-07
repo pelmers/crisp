@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    {{! Page Meta }}
+    <title>Welcome | pelmers home</title>
+    {{! Styles }}
+    <link rel="stylesheet" type="text/css" href="{{asset '/styles/home.css'}}">
+    <link rel="preload" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
+
+    <link rel="preload" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+        </noscript>
+    {{! Responsive Meta Tags }}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="description"
+        content="Blog of Peter Elmers, focused on sharing lessons learned from experiences and solving problems in daily life" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+				<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+    {{{block "head"}}}
+    {{ghost_head}}
+</head>
+
+<body id="body" class="{{body_class}}">
+   <div id="home-container">
+        <div id="home-words">
+            <h1>Hi, I'm Peter,</h1>
+            <p>a software-making human bean. If not, I'm probably hella asleep.
+            <p>Otherwise you might find me:
+            <ul>
+                <li>
+                    <p>Writing posts for <a href="/blog/">my blog</a>, a small collection of <a href="/oregons-willamette-valley-scenic-bikeway-a-video-tour-part-1/">stuffs</a> and <a href="/is-it-just-me/">things</a> that I have the inexplicable and capricious urge to share every once in a while.
+                </li>
+                <li>
+                    Making <a href="https://github.com/pelmers/">side projects</a>, which I'll organize... eventually
+                </li>
+                <li>
+                    <a href="https://www.strava.com/athletes/4873832">Running</a> or playing go or playing video games
+                </li>
+                <li>
+                    Patiently awaiting you to <a href="/about/">contact me</a>
+                </li>
+            </ul>
+        </div>
+        <img id="home-img" src="{{asset '/images/peter.jpg'}}">
+    </div>
+ 
+    {{ghost_foot}}
+</body>
+
+</html>
