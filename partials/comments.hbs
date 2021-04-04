@@ -12,6 +12,7 @@
     };
     
     let clicked = false;
+    const btn = document.querySelector('#disqus-btn');
     function dq() {
         if (clicked) {
             return;
@@ -23,8 +24,9 @@
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
         })();
+        btn.style.display = 'none';
     }
-    document.querySelector('#disqus-btn').addEventListener('click', dq);
+    btn.addEventListener('click', dq);
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
