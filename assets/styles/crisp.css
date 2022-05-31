@@ -614,3 +614,17 @@ footer a:hover {
 	cursor: pointer;
 	padding: 0.3em;
 }
+
+figcaption {
+	text-align: center;
+	width: 100%;
+	min-width: 100%;
+	font-weight: 400;
+	color: #626d79;
+	font-size:0.9rem;
+}
+
+.kg-image-card > img {
+	height: auto;
+	width: auto;
+}

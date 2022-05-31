@@ -19,7 +19,6 @@
 			{{! Responsive Meta Tags }}
 	    <meta name="HandheldFriendly" content="True" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	    <meta name="description" content="{{meta_description}}" />
 			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!--[if lt IE 9]>
 				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -29,9 +28,9 @@
 	    {{ghost_head}}
 	</head>
 	<body id="page-body" class="{{body_class}}">
-		<header id="page-header" {{#if @blog.cover_image}}style="background-image: url('{{@blog.cover_image}}')"{{/if}}>
+		<header id="page-header" {{#if @site.cover_image}}style="background-image: url('{{@site.cover_image}}')"{{/if}}>
 			<div id="header-content">
-			{{#if @blog.logo}}<a id="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+			{{#if @site.logo}}<a id="logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>{{/if}}
 			<div id="header-nav">
 				{{navigation}}
 			</div>
@@ -41,7 +40,7 @@
 			{{{body}}}
 		</main>
 		<footer id="footer">
-			<section id="footer-message">&copy; {{date format='YYYY'}} {{@blog.title}}. All rights reserved. </section>
+			<section id="footer-message">&copy; {{date format='YYYY'}} {{@site.title}}. All rights reserved. </section>
 		</footer>
 	{{ghost_foot}}
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>

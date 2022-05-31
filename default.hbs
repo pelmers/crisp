@@ -28,17 +28,17 @@
 	    {{ghost_head}}
 	</head>
 	<body id="body" class="{{body_class}}">
-		<header id="header" {{#if @blog.cover_image}}style="background-image: url('{{@blog.cover_image}}')"{{/if}}>
-			{{#if @blog.logo}}<a id="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-			<h1><a href="{{@blog.url}}">{{@blog.description}}</a></h1>
-			<p>{{@blog.title}}</p>
+		<header id="header" {{#if @site.cover_image}}style="background-image: url('{{@site.cover_image}}')"{{/if}}>
+			{{#if @site.logo}}<a id="logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>{{/if}}
+			<h1><a href="{{@site.url}}">{{@site.description}}</a></h1>
+			<p>{{@site.title}}</p>
 			{{navigation}}
 		</header>
 		<main id="content">
 			{{{body}}}
 		</main>
 		<footer id="footer">
-			<section id="footer-message">&copy; {{date format='YYYY'}} {{@blog.title}}. All rights reserved. </section>
+			<section id="footer-message">&copy; {{date format='YYYY'}} {{@site.title}}. All rights reserved. </section>
 		</footer>
 	{{ghost_foot}}
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
