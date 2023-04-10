@@ -113,7 +113,7 @@ p, hr, h4, h5, h6 {
 }
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+	font-family: 'Helvetica Neue',-apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans',sans-serif;
 	font-weight: 500;
 }
 h1 {
@@ -159,9 +159,9 @@ strong {
 	font-weight: 700;
 }
 blockquote {
-	border-left: 0.4em solid #eee;
+	border-left: 0.3em solid #0085b9;
 	padding-left: 1.2em;
-	font-size: 1.3em;
+	font-size: 19px;
 }
 hr{
  	border: 0;
