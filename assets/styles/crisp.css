@@ -249,6 +249,12 @@ h1.post-title {
 	color: black;
 	text-align: center;
 }
+h2.post-title {
+	margin-top:0.5em;
+	margin-bottom: 0px;
+	font-weight: 500;
+	font-size: 35px;
+}
 h3.post-title {
 	margin-top:0.4em;
 	padding-bottom:0.9em;
@@ -472,6 +478,12 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 600px) { 
+	#h1-site-description {
+		display: none;
+	}
+	#p-site-title {
+		display: none;
+	}
 	.post-thumbnail {
 		flex-basis: 100%;
 	}
@@ -516,8 +528,8 @@ footer a:hover {
 .post-index {
   position: relative;
   max-width: 850px;
-  margin: 2.457rem 0px;
-  padding-bottom: 2.457rem;
+  margin: 1.3rem 0px;
+  padding-bottom: 1.3rem;
   border-bottom: #EBF2F6 1px solid;
   word-break: break-word;
   hyphens: auto;
@@ -562,6 +574,7 @@ footer a:hover {
   margin: 0 0 0 0;
   font-size: 18px;
   font-weight: normal;
+  color: #555;
 }
 
 .post-index .post-thumbnail{

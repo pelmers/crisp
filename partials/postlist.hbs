@@ -4,24 +4,26 @@
 
     <header class="post-header">
         <h2 class="post-title typl8-gamma"><a href="{{url}}">{{{title}}}</a></h2>
+        <footer class="post-meta">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM Do YYYY"}}</time>
+            {{tags prefix=" &bull; "}}
+        </footer>
     </header>
     <div class="post-row">
       {{#if feature_image}}
       <div class="post-thumbnail" id="{{url}}-post-thumbnail">
-        <img src="{{img_url feature_image size="thumb"}}" style="max-height: 160px;" alt="{{title}}" />
+        <a href="{{url}}">
+          <img src="{{img_url feature_image size="thumb"}}" alt="{{title}}" />
+        </a>
       </div>
       {{/if}}
 
 
       <div class="post-excerpt">
-          <p>{{excerpt words="30"}} <span style="color:#ccc;">…</span></p>
+          <p>{{excerpt words="24"}} <span style="color:#ccc;">…</span></p>
           <p style="margin-top: 0em;"><a class="read-more" href="{{url}}"> <span>&raquo;</span> </a></p>
       </div>
     </div>
-    <footer class="post-meta">
-        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM Do YYYY"}}</time>
-        {{tags prefix=" &bull; "}}
-    </footer>
 </article>
 {{/foreach}}
 
