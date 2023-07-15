@@ -31,8 +31,8 @@
 	<body id="body" class="{{body_class}}">
 		<header id="header" {{#if @site.cover_image}}style="background-image: url('{{@site.cover_image}}')"{{/if}}>
 			{{#if @site.logo}}<a id="logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>{{/if}}
-			<h1 id="h1-site-description"><a href="{{@site.url}}">{{@site.description}}</a></h1>
-			<p id="p-site-title">{{@site.title}}</p>
+			<h1 id="h1-site-description"><a href="{{@site.url}}">{{@site.title}}</a></h1>
+			<p id="p-site-title">{{@site.description}}</p>
 			{{navigation}}
 		</header>
 		<main id="content">
