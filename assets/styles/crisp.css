@@ -637,6 +637,10 @@ figcaption {
 	font-size:0.9rem;
 }
 
+figcaption.pic-caption {
+	margin-top: -1.5em;
+}
+
 .kg-image-card > img {
 	height: auto;
 	width: auto;
