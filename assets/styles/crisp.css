@@ -16,6 +16,7 @@ html {
 }
 #body {
 	padding: 2em 2.5em 1em 20em;
+	background-color: #fafaf9;
 }                  
 #header-content {
 	width: 100%;
@@ -253,7 +254,7 @@ h2.post-title {
 	margin-top:0.5em;
 	margin-bottom: 0px;
 	font-weight: 500;
-	font-size: 35px;
+	font-size: 25px;
 }
 h3.post-title {
 	margin-top:0.4em;
@@ -574,7 +575,7 @@ footer a:hover {
   margin: 0 0 0 0;
   font-size: 18px;
   font-weight: normal;
-  color: #555;
+  color: oklch(55% .0064 95);
 }
 
 .post-index .post-thumbnail{
@@ -588,6 +589,7 @@ footer a:hover {
 }
 
 .post-index .read-more {
+	color: oklch(0.4 0.01 95);
     text-decoration: none;
 }
 
